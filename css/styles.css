@@ -1,8 +1,41 @@
-body { font-family: sans-serif; margin: 0; background-color: #f0f2f5; }
-.vista { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.menu-opciones button { 
-    padding: 20px 40px; margin: 10px; font-size: 1.2rem; 
-    background: #0056b3; color: white; border: none; border-radius: 8px; cursor: pointer; 
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background-color: #eef2f7; 
+    margin: 0; 
 }
-button:hover { background: #003d80; }
-#modulo-tos { display: flex; flex-direction: column; align-items: flex-start; padding: 20px; }
+
+/* Efecto de tarjetas */
+.card { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 20px; 
+    text-align: center; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+    border-color: #3498db;
+}
+
+.icono { font-size: 3rem; margin-bottom: 10px; }
+
+/* Botón estético de regreso */
+.btn-regresar { 
+    position: fixed; 
+    top: 30px; 
+    left: 30px; 
+    padding: 12px 25px;
+    background: #34495e; 
+    color: white; 
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-regresar:hover { background: #2c3e50; }
