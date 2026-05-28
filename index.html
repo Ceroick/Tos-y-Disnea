@@ -1,24 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Fisiológico</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
-    <div id="pantalla-inicio" class="vista">
-        <h1 style="color: #2c3e50; margin-bottom: 50px;">Simulador Fisiológico</h1>
+    <div id="pantalla-inicio" class="vista active">
+        <header class="header-principal">
+            <h1>Simulador Fisiológico</h1>
+            <p class="subtitulo">Análisis Mecánico y Reflejo</p>
+        </header>
+
         <div class="menu-opciones">
             <div class="card" onclick="mostrarModulo('tos')">
                 <div class="icono">🫁</div>
-                <h3>Tos</h3>
-                <p>Análisis del arco reflejo</p>
+                <h3>Módulo Tos</h3>
+                <p>Análisis del arco reflejo y dinámica de fluidos</p>
             </div>
             <div class="card" onclick="mostrarModulo('disnea')">
                 <div class="icono">💨</div>
-                <h3>Disnea</h3>
-                <p>Mecánica ventilatoria</p>
+                <h3>Módulo Disnea</h3>
+                <p>Mecánica ventilatoria y cargas de trabajo</p>
             </div>
         </div>
     </div>
 
-    <div id="modulo-tos" class="vista" style="display:none;">
-        <button class="btn-regresar" onclick="regresar()">← Volver</button>
-        <h2 style="color: #2980b9;">Análisis de la Tos</h2>
-        <main id="lienzo-tos">
-            </main>
+    <div id="modulo-trabajo" class="vista" style="display: none;">
+        <nav class="barra-navegacion">
+            <button class="btn-regresar" onclick="regresar()">← Regresar al Menú</button>
+            <h2 id="titulo-modulo">Módulo Activo</h2>
+        </nav>
+        
+        <main id="lienzo-simulacion" class="lienzo-blueprint">
+            <div id="contenedor-animacion">
+                <p class="indicador-area">[Área de Renderizado Anatómico]</p>
+            </div>
+        </main>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
+</html>
