@@ -1,8 +1,12 @@
-function dispararTos(tipoEstimulo) {
-    console.log("Iniciando secuencia para: " + tipoEstimulo);
-    
-    // 1. Mostrar efecto visual del estímulo (ej. humo entrando)
-    // 2. Ejecutar la función del Bloque Motor (los 6 pasos)
-    animarFaseAferente(tipoEstimulo);
-    setTimeout(animarBloqueMotor, 1000); 
+function mostrarModulo(modulo) {
+    document.getElementById('pantalla-inicio').style.display = 'none';
+    if (modulo === 'tos') {
+        document.getElementById('modulo-tos').style.display = 'flex';
+    }
+}
+
+function regresar() {
+    document.getElementById('pantalla-inicio').style.display = 'flex';
+    document.getElementById('modulo-tos').style.display = 'none';
+    // Aquí puedes añadir lógica para resetear animaciones
 }
