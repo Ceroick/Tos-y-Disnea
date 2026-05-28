@@ -1,5 +1,8 @@
-#app { display: flex; height: 100vh; }
-#controles { width: 200px; padding: 20px; background: #f4f4f4; }
-#lienzo { flex-grow: 1; position: relative; }
-#modelo-anatomico { width: 80%; margin: 50px; }
-/* Aquí añadirás tus animaciones @keyframes más adelante */
+body { font-family: sans-serif; margin: 0; background-color: #f0f2f5; }
+.vista { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.menu-opciones button { 
+    padding: 20px 40px; margin: 10px; font-size: 1.2rem; 
+    background: #0056b3; color: white; border: none; border-radius: 8px; cursor: pointer; 
+}
+button:hover { background: #003d80; }
+#modulo-tos { display: flex; flex-direction: column; align-items: flex-start; padding: 20px; }
