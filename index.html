@@ -1,13 +1,17 @@
-<div class="container">
-    <aside id="panel-control">
-        <h1>Simulador Tos</h1>
-        <button onclick="dispararTos('humo')">Estímulo: Humo</button>
-        <button onclick="dispararTos('reflujo')">Estímulo: Reflujo</button>
-        <div id="datos-fisiologicos">
-            <p>pH: <span id="ph">7.4</span></p>
-            <p>CO2: <span id="co2">40</span> mmHg</p>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div id="pantalla-inicio" class="vista">
+        <h1>Simulador Médico Interactivo</h1>
+        <div class="menu-opciones">
+            <button onclick="mostrarModulo('tos')">Módulo: TOS</button>
+            <button onclick="mostrarModulo('disnea')">Módulo: DISNEA</button>
         </div>
-    </aside>
-    <main id="lienzo-animacion">
-        </main>
-</div>
+    </div>
+
+    <!-- Módulo Tos (Oculto por defecto) -->
+    <div id="modulo-tos" class="vista" style="display:none;">
+        <button onclick="regresar()">← Regresar</button>
+        <h2>Secuencia de la Tos</h2>
+        <main id="lienzo-tos"></main>
+    </div>
+</body>
