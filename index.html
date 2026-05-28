@@ -15,13 +15,13 @@
 
         <div class="menu-opciones">
             <div class="card" onclick="mostrarModulo('tos')">
-                <div class="icono"></div>
+                <div class="icono" style="font-weight: 800; color: #38bdf8;">[ T ]</div>
                 <h3>Tos</h3>
                 <p>Análisis de la vía aferente, integración central y dinámica expulsiva.</p>
             </div>
             
             <div class="card" onclick="mostrarModulo('disnea')">
-                <div class="icono"></div>
+                <div class="icono" style="font-weight: 800; color: #38bdf8;">[ D ]</div>
                 <h3>Disnea</h3>
                 <p>Mecánica ventilatoria, cargas de trabajo y disociación neuromuscular.</p>
             </div>
@@ -38,62 +38,112 @@
             <h2 id="titulo-modulo">Módulo Activo</h2>
         </nav>
         
-      <main id="lienzo-simulacion" class="lienzo-blueprint">
+        <main id="lienzo-simulacion" class="lienzo-blueprint">
             <div class="contenedor-split">
                 
                 <div class="columna-texto">
                     
                     <div id="algoritmo-tos" class="flujo-algoritmo" style="display: none;">
                         <div class="caja-paso">
-                            <span class="paso-num">1</span>
-                            <div class="paso-texto"><strong>Estímulo Inicial:</strong> Irritación química o mecánica en la mucosa[cite: 19].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Paso 1: Clasificación Temporal</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                <ul style="margin-left: 20px;">
+                                    <li><strong>Aguda (&lt; 3 semanas):</strong> Infección de vías respiratorias, broncoaspiración o inhalación nociva.</li>
+                                    <li><strong>Subaguda (3 a 8 semanas):</strong> Secuela de traqueobronquitis (síndrome tusígeno posviral).</li>
+                                    <li><strong>Crónica (&gt; 8 semanas):</strong> Requiere protocolo de estudio formal.</li>
+                                </ul>
+                            </div>
                         </div>
+
                         <div class="caja-paso">
-                            <span class="paso-num">2</span>
-                            <div class="paso-texto"><strong>Vía Aferente:</strong> Activación de receptores sensitivos. Transmisión por fibras C y Aδ vía nervio neumogástrico[cite: 20, 23].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Paso 2: Evaluación Inicial (Tos Crónica)</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                Realizar anamnesis enfocada en exposiciones, desencadenantes y fármacos.<br><br>
+                                Exploración física cardiopulmonar y de vías altas. Obtener una radiografía de tórax.
+                            </div>
                         </div>
+
                         <div class="caja-paso">
-                            <span class="paso-num">3</span>
-                            <div class="paso-texto"><strong>Integración:</strong> Procesamiento en el núcleo del tracto solitario (bulbo raquídeo) y sensación consciente cortical[cite: 23, 24].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Paso 3A: Abordaje - Radiografía Anormal</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                Iniciar valoración dirigida a explicar la anomalía.<br>
+                                - <em>Esputo purulento:</em> Cultivo sistemático de bacterias.<br>
+                                - <em>Esputo mucoide:</em> Solicitar estudio citológico.
+                            </div>
                         </div>
+
                         <div class="caja-paso">
-                            <span class="paso-num">4</span>
-                            <div class="paso-texto"><strong>Preparación Eferente:</strong> Inspiración profunda para optimizar la función mecánica de los músculos espiratorios[cite: 25, 31].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Paso 3B: Abordaje - Radiografía Normal</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                <ul style="margin-left: 20px;">
+                                    <li><strong>Uso de IECAs:</strong> Interrumpir 1 mes.</li>
+                                    <li><strong>Drenaje posnasal:</strong> Antihistamínicos, descongestivos o glucocorticoides nasales.</li>
+                                    <li><strong>GERD:</strong> IBP, antagonistas H2, cambios dietéticos.</li>
+                                    <li><strong>Asma variante tos:</strong> Espirometría / Flujo máximo. Tratar con esteroides inhalados o agonistas B2.</li>
+                                    <li><strong>Bronquitis eosinofílica:</strong> Eosinófilos en esputo &gt; 3%. Tratar con esteroides inhalados.</li>
+                                </ul>
+                            </div>
                         </div>
+
                         <div class="caja-paso">
-                            <span class="paso-num">5</span>
-                            <div class="paso-texto"><strong>Fase Compresiva:</strong> Oclusión glótica y contracción muscular abdominal. Aumento masivo de presión intratorácica[cite: 26, 27].</div>
-                        </div>
-                        <div class="caja-paso">
-                            <span class="paso-num">6</span>
-                            <div class="paso-texto"><strong>Expulsión:</strong> Apertura súbita, colapso dinámico de vías aéreas y flujo espiratorio a máxima velocidad[cite: 28, 29].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Paso 4: Tos Refractaria</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                Si no hay mejora empírica, realizar <strong>CT de tórax</strong> (descartar carcinoide, EPI, bronquiectasias, micobacterias).<br><br>
+                                Si la CT es normal, sospechar <em>síndrome de tos por hipersensibilidad (neuropático)</em>. Considerar moduladores neurológicos (gabapentina, pregabalina, amitriptilina) o fonoterapia.
+                            </div>
                         </div>
                     </div>
 
                     <div id="algoritmo-disnea" class="flujo-algoritmo" style="display: none;">
                         <div class="caja-paso">
-                            <span class="paso-num">1</span>
-                            <div class="paso-texto"><strong>Desequilibrio Fisiológico:</strong> Hipoxemia, hipercapnia, acidemia, aumento de resistencia de vías respiratorias o disminución de distensibilidad[cite: 255].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Evaluación Inicial</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                Realizar anamnesis y exploración física.<br>
+                                Ejecutar oximetría durante la marcha y valoración del flujo máximo.<br><br>
+                                <em>¿Diagnóstico claro?</em><br>
+                                <strong>Sí:</strong> Ofrecer tratamiento.<br>
+                                <strong>No:</strong> Avanzar a la Fase 1.
+                            </div>
                         </div>
+
                         <div class="caja-paso">
-                            <span class="paso-num">2</span>
-                            <div class="paso-texto"><strong>Captación (Vía Aferente):</strong> Activación de quimiorreceptores centrales/periféricos, mecanorreceptores torácicos y metaborreceptores musculares[cite: 256, 257].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Fase 1: Estudios de Gabinete Básicos</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                Solicitar radiografía de tórax, espirometría y electrocardiograma.<br>
+                                Solicitar biometría hemática completa y panel metabólico básico.<br><br>
+                                <em>¿Diagnóstico claro?</em><br>
+                                <strong>Sí:</strong> Ofrecer tratamiento.<br>
+                                <strong>No:</strong> Avanzar a la Fase 2.
+                            </div>
                         </div>
+
                         <div class="caja-paso">
-                            <span class="paso-num">3</span>
-                            <div class="paso-texto"><strong>Integración Central:</strong> Las señales aferentes convergen y estimulan el tronco del encéfalo y la corteza sensitiva[cite: 257, 289].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Fase 2: Pruebas Funcionales e Imagen Avanzada</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                Solicitar CT de tórax (Considerar angiografía si se sospecha TEP).<br>
+                                Evaluar volúmenes pulmonares, DLCO y pruebas de función neuromuscular.<br>
+                                Realizar ecocardiograma y pruebas de esfuerzo.<br><br>
+                                <em>¿Diagnóstico claro?</em><br>
+                                <strong>Sí:</strong> Ofrecer tratamiento.<br>
+                                <strong>No:</strong> Avanzar a la Fase 3.
+                            </div>
                         </div>
+
                         <div class="caja-paso">
-                            <span class="paso-num">4</span>
-                            <div class="paso-texto"><strong>Respuesta Motora (Vía Eferente):</strong> Envío de señales desde la corteza motora a los músculos respiratorios y descargas colaterales a la corteza sensitiva[cite: 258, 292].</div>
-                        </div>
-                        <div class="caja-paso">
-                            <span class="paso-num">5</span>
-                            <div class="paso-texto"><strong>Discordancia Eferente-Reaferente:</strong> Desajuste entre la orden motora enviada al sistema respiratorio y la retroalimentación de la ventilación física lograda[cite: 252].</div>
-                        </div>
-                        <div class="caja-paso">
-                            <span class="paso-num">6</span>
-                            <div class="paso-texto"><strong>Percepción Clínica:</strong> Experiencia subjetiva de malestar manifestada como "falta de aire", "opresión torácica" o "trabajo respiratorio"[cite: 238, 251, 289, 290].</div>
+                            <div class="paso-texto" style="width: 100%;">
+                                <strong>Fase 3: Estudios Especializados</strong>
+                                <hr style="border: 0; border-top: 1px solid #334155; margin: 8px 0 12px 0;">
+                                Considerar pruebas de esfuerzo cardiopulmonar (CPET).<br>
+                                Derivar con subespecialistas correspondientes (neumología, cardiología, neurología).
+                            </div>
                         </div>
                     </div>
 
@@ -101,17 +151,11 @@
 
                 <div class="columna-visual">
                     <div class="visor-animacion">
-                        <img id="render-visual" src="" alt="Animación de Simulación" class="gif-render">
+                        <img id="render-visual" src="" alt="Simulación Clínica" class="gif-render">
                     </div>
                 </div>
 
             </div>
-        </main>
-            <!-- AQUÍ TERMINA LO QUE PEGASTE -->
-
-        </main>
-    </div>
-                </div>
         </main>
     </div>
 
