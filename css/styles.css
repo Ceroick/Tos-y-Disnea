@@ -1,1 +1,5 @@
-
+#app { display: flex; height: 100vh; }
+#controles { width: 200px; padding: 20px; background: #f4f4f4; }
+#lienzo { flex-grow: 1; position: relative; }
+#modelo-anatomico { width: 80%; margin: 50px; }
+/* Aquí añadirás tus animaciones @keyframes más adelante */
