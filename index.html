@@ -15,13 +15,13 @@
 
         <div class="menu-opciones">
             <div class="card" onclick="mostrarModulo('tos')">
-                <div class="icono">🫁</div>
+                <div class="icono"></div>
                 <h3>Tos</h3>
                 <p>Análisis de la vía aferente, integración central y dinámica expulsiva.</p>
             </div>
             
             <div class="card" onclick="mostrarModulo('disnea')">
-                <div class="icono">💨</div>
+                <div class="icono"></div>
                 <h3>Disnea</h3>
                 <p>Mecánica ventilatoria, cargas de trabajo y disociación neuromuscular.</p>
             </div>
@@ -38,32 +38,75 @@
             <h2 id="titulo-modulo">Módulo Activo</h2>
         </nav>
         
-        <main id="lienzo-simulacion" class="lienzo-blueprint">
-            <!-- MÓDULO DE TRABAJO -->
-    <div id="modulo-trabajo" class="vista" style="display: none;">
-        <nav class="barra-navegacion">
-            <button class="btn-regresar" onclick="regresar()">← Regresar al Menú</button>
-            <h2 id="titulo-modulo">Módulo Activo</h2>
-        </nav>
-        
-        <main id="lienzo-simulacion" class="lienzo-blueprint">
-            
-            <!-- AQUÍ EMPIEZA LO QUE PEGASTE -->
+      <main id="lienzo-simulacion" class="lienzo-blueprint">
             <div class="contenedor-split">
                 
-                <!-- Columna Izquierda: El Algoritmo -->
                 <div class="columna-texto">
-                    <!-- ... contenido de tu algoritmo ... -->
+                    
+                    <div id="algoritmo-tos" class="flujo-algoritmo" style="display: none;">
+                        <div class="caja-paso">
+                            <span class="paso-num">1</span>
+                            <div class="paso-texto"><strong>Estímulo Inicial:</strong> Irritación química o mecánica en la mucosa[cite: 19].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">2</span>
+                            <div class="paso-texto"><strong>Vía Aferente:</strong> Activación de receptores sensitivos. Transmisión por fibras C y Aδ vía nervio neumogástrico[cite: 20, 23].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">3</span>
+                            <div class="paso-texto"><strong>Integración:</strong> Procesamiento en el núcleo del tracto solitario (bulbo raquídeo) y sensación consciente cortical[cite: 23, 24].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">4</span>
+                            <div class="paso-texto"><strong>Preparación Eferente:</strong> Inspiración profunda para optimizar la función mecánica de los músculos espiratorios[cite: 25, 31].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">5</span>
+                            <div class="paso-texto"><strong>Fase Compresiva:</strong> Oclusión glótica y contracción muscular abdominal. Aumento masivo de presión intratorácica[cite: 26, 27].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">6</span>
+                            <div class="paso-texto"><strong>Expulsión:</strong> Apertura súbita, colapso dinámico de vías aéreas y flujo espiratorio a máxima velocidad[cite: 28, 29].</div>
+                        </div>
+                    </div>
+
+                    <div id="algoritmo-disnea" class="flujo-algoritmo" style="display: none;">
+                        <div class="caja-paso">
+                            <span class="paso-num">1</span>
+                            <div class="paso-texto"><strong>Desequilibrio Fisiológico:</strong> Hipoxemia, hipercapnia, acidemia, aumento de resistencia de vías respiratorias o disminución de distensibilidad[cite: 255].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">2</span>
+                            <div class="paso-texto"><strong>Captación (Vía Aferente):</strong> Activación de quimiorreceptores centrales/periféricos, mecanorreceptores torácicos y metaborreceptores musculares[cite: 256, 257].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">3</span>
+                            <div class="paso-texto"><strong>Integración Central:</strong> Las señales aferentes convergen y estimulan el tronco del encéfalo y la corteza sensitiva[cite: 257, 289].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">4</span>
+                            <div class="paso-texto"><strong>Respuesta Motora (Vía Eferente):</strong> Envío de señales desde la corteza motora a los músculos respiratorios y descargas colaterales a la corteza sensitiva[cite: 258, 292].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">5</span>
+                            <div class="paso-texto"><strong>Discordancia Eferente-Reaferente:</strong> Desajuste entre la orden motora enviada al sistema respiratorio y la retroalimentación de la ventilación física lograda[cite: 252].</div>
+                        </div>
+                        <div class="caja-paso">
+                            <span class="paso-num">6</span>
+                            <div class="paso-texto"><strong>Percepción Clínica:</strong> Experiencia subjetiva de malestar manifestada como "falta de aire", "opresión torácica" o "trabajo respiratorio"[cite: 238, 251, 289, 290].</div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Columna Derecha: El Visor del GIF -->
                 <div class="columna-visual">
                     <div class="visor-animacion">
-                        <img src="assets/animacion_tos.gif" alt="Animación" class="gif-render">
+                        <img id="render-visual" src="" alt="Animación de Simulación" class="gif-render">
                     </div>
                 </div>
 
             </div>
+        </main>
             <!-- AQUÍ TERMINA LO QUE PEGASTE -->
 
         </main>
