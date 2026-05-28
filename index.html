@@ -1,17 +1,24 @@
 <body>
-    <!-- Pantalla de Inicio -->
     <div id="pantalla-inicio" class="vista">
-        <h1>Simulador Médico Interactivo</h1>
+        <h1 style="color: #2c3e50; margin-bottom: 50px;">Simulador Fisiológico</h1>
         <div class="menu-opciones">
-            <button onclick="mostrarModulo('tos')">Módulo: TOS</button>
-            <button onclick="mostrarModulo('disnea')">Módulo: DISNEA</button>
+            <div class="card" onclick="mostrarModulo('tos')">
+                <div class="icono">🫁</div>
+                <h3>Tos</h3>
+                <p>Análisis del arco reflejo</p>
+            </div>
+            <div class="card" onclick="mostrarModulo('disnea')">
+                <div class="icono">💨</div>
+                <h3>Disnea</h3>
+                <p>Mecánica ventilatoria</p>
+            </div>
         </div>
     </div>
 
-    <!-- Módulo Tos (Oculto por defecto) -->
     <div id="modulo-tos" class="vista" style="display:none;">
-        <button onclick="regresar()">← Regresar</button>
-        <h2>Secuencia de la Tos</h2>
-        <main id="lienzo-tos"></main>
+        <button class="btn-regresar" onclick="regresar()">← Volver</button>
+        <h2 style="color: #2980b9;">Análisis de la Tos</h2>
+        <main id="lienzo-tos">
+            </main>
     </div>
 </body>
