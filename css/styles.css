@@ -147,3 +147,66 @@ body {
     justify-content: center;
     position: relative;
 }
+
+
+/* Layout Split (Izquierda Texto / Derecha GIF) */
+.contenedor-split {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.columna-texto {
+    flex: 1;
+    background: rgba(30, 41, 59, 0.8); /* Fondo semi-transparente oscuro */
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #38bdf8;
+}
+
+.algoritmo-lista {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.algoritmo-lista li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #334155;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+.algoritmo-lista li:last-child {
+    border-bottom: none;
+}
+
+.columna-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* El cuadro o "monitor" donde irá tu GIF */
+.visor-animacion {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border: 2px solid #475569;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-render {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que tu GIF no se deforme */
+}
